@@ -1,4 +1,4 @@
-body {
+.body {
   position: absolute;
   width: 100%;
   margin: 0;
@@ -10,12 +10,15 @@ body {
   align-items: center;
 }
 
-.header {
+.body__header {
   box-sizing: border-box;
-  background-color: #1d2021;
   padding: 15px;
-  display: flex;
   width: 100%;
+}
+
+.header {
+  background-color: #1d2021;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -61,37 +64,46 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.body__main {
   padding: 20px;
   width: 800px;
   box-sizing: border-box;
 }
 
 @media (max-width: 840px) {
-  .main {
+  .body__main {
     width: 100%;
   }
 }
 
-.table-of-contents {
+.main__table-of-contents {
   width: 400px;
-  background-color: #1d2021;
-  border: 2px solid #fabd2f;
-  color: #fbf1c7;
-  border-radius: 6px;
   padding: 20px;
   box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
-  .table-of-contents {
+  .main__table-of-contents {
     width: 100%;
   }
+}
+
+.table-of-contents {
+  background-color: #1d2021;
+  border: 2px solid #fabd2f;
+  color: #fbf1c7;
+  border-radius: 6px;
+}
+
+.main__article {
+  width: 100%;
 }
 
 .article {
   color: #fbf1c7;
   text-align: justify;
-  width: 100%;
   line-height: 1.5;
   word-spacing: 1px;
 }
@@ -144,34 +156,43 @@ body {
   }  
 }
 
-.comments {
+.main__comments {
   width: 400px;
-  color: #fbf1c7;
   box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .main__comments {
+    width: 100%;
+  }
+}
+
+.comments {
+  color: #fbf1c7;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-self: start;
 }
 
-@media (max-width: 600px) {
-  .comments {
-    width: 100%;
-  }
+.comments__comment {
+  padding: 10px;
 }
 
 .comment {
-  padding: 10px;
   border-radius: 6px;
   border: 2px solid #fbf1c7;
 }
 
-.footer {
+.body__footer {
   box-sizing: border-box;
-  background-color: #1d2021;
   padding: 10px 20px;
-  display: flex;
   width: 100%;
+}
+
+.footer {
+  background-color: #1d2021;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -196,7 +217,7 @@ body {
 .footer__image {
   padding: 20px;
   box-sizing: border-box;
-  min-width: 100%;
+  width: 100%;
 }
 
 @media (max-width: 800px) {
