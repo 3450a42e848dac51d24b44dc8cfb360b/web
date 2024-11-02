@@ -42,22 +42,22 @@
   font-size: 24px;
   font-weight: bold;
   color: #fbf1c7;
+  padding: 5px;
+}
+
+.header__nav-item:hover {
+  color: #458588;
+}
+
+.header__nav-item_active {
+  background-color: #fbf1c7;
+  border-radius: 5px;
+  color: #282828;
 }
 
 .header__account {
   width: 30px;
   height: 30px;
-}
-
-.star {
-  position: absolute;
-  left: 20px;
-  top: 100px;
-  width: 20px;
-  height: 20px;
-  padding: 10px;
-  border: 2px solid #fbf1c7;
-  border-radius: 15px;
 }
 
 .main {
@@ -95,6 +95,35 @@
   border: 2px solid #fabd2f;
   color: #fbf1c7;
   border-radius: 6px;
+}
+
+.main__post-list {
+  width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .main__post-list {
+    width: 100%;
+  }
+}
+
+.post-list {
+  background-color: #1d2021;
+  border: 2px solid #fabd2f;
+  color: #fbf1c7;
+  border-radius: 6px;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.post-list__link {
+  color: #fbf1c7;
+  font-size: 24px;
 }
 
 .main__article {
@@ -175,14 +204,65 @@
   align-self: start;
 }
 
-.comments__comment {
+.comment-form {
+  border-radius: 6px;
+  border: 2px solid #fbf1c7;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
+  gap: 10px;
+}
+
+.comment-form__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.comment-form__label {
+
+}
+
+.comment-form__input {
+  padding: 6px;
+  color: #fbf1c7;
+  background-color: #1d2021;
+  border: 1px solid #fbf1c7;
+  border-radius: 7px;
+}
+
+.comment-form__textarea {
+  padding: 6px;
+  color: #fbf1c7;
+  background-color: #1d2021;
+  border: 1px solid #fbf1c7;
+  border-radius: 7px;
+  min-height: 100px;
+}
+
+.comment-form__submit {
+  padding: 10px;
+  color: #fbf1c7;
+  background-color: #1d2021;
+  /* border: 2px solid #98971a; */
+  border-radius: 7px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .comment {
-  border-radius: 6px;
-  border: 2px solid #fbf1c7;
+  border: 1px solid #fbf1c7;
+  border-radius: 15px;
+  padding: 12px;
 }
+
+.comment__author {}
+
+.comment__text {}
 
 .body__footer {
   box-sizing: border-box;
@@ -206,6 +286,10 @@
 }
 
 .footer__copyright {
+  color: #fbf1c7;
+}
+
+.footer__timing {
   color: #fbf1c7;
 }
 
