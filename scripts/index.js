@@ -1,7 +1,7 @@
 (() => {
-  window.addEventListener("load", _ => {
+  document.addEventListener("DOMContentLoaded", _ => {
     const timing = performance.timing
-    const loadTimeMs = timing.domContentLoadedEventEnd - timing.navigationStart;
+    const loadTimeMs = timing.domContentLoadedEventStart - timing.navigationStart;
     document.getElementById("timing").textContent = `Время загрузки страницы: ${loadTimeMs} мс`
 
     document

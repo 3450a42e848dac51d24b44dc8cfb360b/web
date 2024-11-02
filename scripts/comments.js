@@ -58,7 +58,7 @@ const onSubmit = e => {
 }
 
 (() => {
-  window.addEventListener("load", _ => {
+  document.addEventListener("DOMContentLoaded", _ => {
     loadComments()
     document
       .getElementById("comment-form")
