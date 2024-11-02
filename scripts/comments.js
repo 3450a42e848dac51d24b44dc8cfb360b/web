@@ -46,10 +46,10 @@ const onSubmit = e => {
   e.preventDefault()
   const username = document
     .getElementById("comment-form__username")
-    .value.trim() || ""
+    .value.trim()
   const text = document
     .getElementById("comment-form__text")
-    .value.trim() || ""
+    .value.trim()
 
   if (isValid(username, text)) {
     addComment(username, text)
