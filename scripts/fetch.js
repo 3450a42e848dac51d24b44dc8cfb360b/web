@@ -29,6 +29,9 @@ const fetchComments = async () => {
   try {
     const res = await fetch("https://jsonplaceholder.typicode.com/comments")
     // const res = await fetch("https://unknown")
+    if (!res.ok) {
+      throw new Error(res.status)
+    }
     const json = await res.json()
 
     json
